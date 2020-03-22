@@ -258,7 +258,7 @@ span {
   font-size: 20px;
   margin: 20px auto;
   text-align: center;
-  z-index: 33;
+  z-index: 50;
 }
 
 .section3 .div2 a {
@@ -637,5 +637,32 @@ footer #fa {
 
   footer #fa {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 370px) {
+  .header img {
+    margin-bottom: 50px;
+  }
+
+  .section1 q {
+    font-size: 15px;
+  }
+
+  .section3 .div1 img {
+    width: 50%;
+    padding: 25px;
+  }
+
+  .section3 .div2 p {
+    font-size: 15px;
+  }
+
+  .section3::after {
+    bottom: -150px;
+  }
+
+  .section5 .container q {
+    font-size: 16px;
   }
 }

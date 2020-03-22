@@ -367,3 +367,9 @@ footer span .fa {
     font-size: 40px;
   }
 }
+
+@media (max-width: 370px) {
+  .services div ul li {
+    font-size: 15px;
+  }
+}
