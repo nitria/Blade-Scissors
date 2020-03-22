@@ -349,6 +349,14 @@ footer span .fa {
 }
 
 @media (max-width: 550px) {
+  .main {
+    margin-bottom: 100px;
+  }
+
+  .services div ul li {
+    font-size: 17px;
+  }
+
   .gallery {
     width: 80vw;
     display: grid;
