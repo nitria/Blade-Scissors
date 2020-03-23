@@ -686,6 +686,9 @@ footer #fa {
 }
 
 @media (max-width: 550px) {
+  .header {
+    height: 70vh;
+  }
   .section1 q {
     margin-top: 100px;
     font-size: 18px;
