@@ -173,10 +173,12 @@ textarea {
   height: 160px;
 }
 
-.contact-info .form input[type="submit"] {
+.contact-info button {
   background-color: #cd9418;
   color: #000000;
   padding: 5px;
+  width: 100px;
+  height: 40px;
 }
 
 .info {

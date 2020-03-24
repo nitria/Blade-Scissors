@@ -63,13 +63,16 @@
         </p>
       </div>
       <div class="contact-info">
-        <div class="form">
-          <input type="text" placeholder="First Name" class="fn" />
-          <input type="text" placeholder="Last Name" class="ln" />
-          <input type="email" placeholder="Email" class="email" />
-          <textarea placeholder="Type your message here..."></textarea>
-          <input type="submit" value="Send" />
-        </div>
+        <form class="form" method="post" action="contactform.php">
+          <input type="text" placeholder="First Name" class="fn" name="first" />
+          <input type="text" placeholder="Last Name" class="ln" name="last" />
+          <input type="email" placeholder="Email" class="email" name="mail" />
+          <textarea
+            placeholder="Type your message here..."
+            name="message"
+          ></textarea>
+          <button type="submit" name="submit" />Send</button>
+        </form>
         <div class="info">
           <ul>
             <li><b>Call us:</b> 012345679</li>

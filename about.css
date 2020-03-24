@@ -362,31 +362,12 @@ footer span .fa {
 
   .gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 0px;
-  }
-
-  .gallery div:nth-child(1) {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-
-  .gallery div:nth-child(2) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .gallery div:nth-child(3) {
-    grid-row: 3/4;
+    gap: 5px;
   }
 
   footer span .fa {
     font-size: 40px;
   }
-}
-
-@media (max-width: 480px) {
-  /*
-  }*/
 }
