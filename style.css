@@ -164,7 +164,7 @@ footer .div1 .nav-link {
 }
 
 .header::after {
-  content: url("images/brush.png");
+  content: url("images/brush-min.png");
   position: absolute;
   left: 0;
   bottom: 0;
@@ -200,7 +200,7 @@ footer .div1 .nav-link {
 }
 
 .section1:after {
-  content: url("images/brush.png");
+  content: url("images/brush-min.png");
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
@@ -218,7 +218,7 @@ footer .div1 .nav-link {
 }
 
 .section2::before {
-  content: url("images/brush.png");
+  content: url("images/brush-min.png");
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
@@ -299,7 +299,7 @@ span {
 }
 
 .section3::after {
-  content: url("images/brush.png");
+  content: url("images/brush-min.png");
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
@@ -330,7 +330,7 @@ span {
 }
 
 .section5::before {
-  content: url("images/brush.png");
+  content: url("images/brush-min.png");
   position: absolute;
   left: 0;
   top: -80px;
