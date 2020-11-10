@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: algerian;
   src: url("algerian.ttf") format("truetype");
@@ -11,6 +12,7 @@ q {
   position: relative;
   color: #9f7313;
   font-size: 16px;
+  quotes: "“" "”" "‘" "’";
 }
 
 q::before {
@@ -23,9 +25,6 @@ q::after {
   content: "\201D";
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
-}
-q {
-  quotes: "\201C""\201D""\2018""\2019";
 }
 
 html,
@@ -41,6 +40,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR*/
@@ -49,27 +49,14 @@ header {
   width: 100%;
   height: 56px;
   background-color: #2d3436;
-  background-image: -o-linear-gradient(135deg, #2d3436 0%, #000000 74%);
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   z-index: 999;
 }
 
-header > .container {
+header .container {
   position: relative;
   padding: 0;
   height: 100%;
-}
-
-header .container .nav .navbar-nav .navbar-brand {
-  position: absolute;
-  width: 100%;
-  max-width: 100px;
-  top: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: none;
 }
 
 header .container .hamburger-menu {
@@ -107,10 +94,6 @@ header .container .nav {
   visibility: hidden;
 }
 
-header .container .nav.open {
-  visibility: visible;
-}
-
 header .container .nav .navbar-nav {
   position: fixed;
   top: 0;
@@ -134,41 +117,50 @@ header .container .nav .navbar-nav {
   margin: 0 auto;
   z-index: 980;
   background-color: #2d3436;
-  background-image: -o-linear-gradient(135deg, #2d3436 0%, #000000 74%);
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   padding: 56px 0 0 0;
 }
 
-header .container nav .navbar-nav .nav-item {
+header .container .nav .navbar-nav .navbar-brand {
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none;
+}
+
+header .container .nav .navbar-nav .nav-item {
   padding: 0 40px;
 }
 
-header .container nav .navbar-nav .nav-item .nav-link {
+header .container .nav .navbar-nav .nav-item .nav-link {
   color: #9f7313;
   font-size: 20px;
 }
 
-header .container nav .navbar-nav .book,
-.div1 .book {
+header .container .nav .navbar-nav .nav-item .nav-link:hover {
+  color: #cd9418 !important;
+}
+
+header .container .nav .navbar-nav .book {
   padding-top: 30px;
 }
 
-header .container nav .navbar-nav .book .nav-link,
-.div1 .book .nav-link {
+header .container .nav .navbar-nav .book .nav-link {
   padding: 8px 16px;
-}
-
-header .container nav .navbar-nav .book .nav-link,
-.div1 .book .nav-link {
   border: 1px solid #9f7313;
 }
 
-header .container nav .navbar-nav .nav-item .nav-link:hover {
-  color: #cd9418 !important;
-}
-header .container nav .navbar-nav .book .nav-link:hover {
+header .container .nav .navbar-nav .book .nav-link:hover {
   border: 1px solid #cd9418;
   color: #cd9418;
+}
+
+header .container .nav.open {
+  visibility: visible;
 }
 
 .section2,
@@ -188,25 +180,27 @@ header .container nav .navbar-nav .book .nav-link:hover {
 
 /* HEADER */
 .top {
-  height: 100vh;
+  height: 80vh;
+  position: relative;
 }
 
-.top .container,
-.top .container .row {
+.top .container {
   height: 100%;
 }
 
 .top .container .row {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
+
 .top::before {
   content: "";
   position: absolute;
@@ -217,6 +211,14 @@ header .container nav .navbar-nav .book .nav-link:hover {
   background: rgba(0, 0, 0, 0.6);
 }
 
+.top::after {
+  content: url("/images/brush-min.png");
+  position: absolute;
+  left: 0;
+  bottom: -288px;
+  width: 100%;
+}
+
 .top img {
   z-index: 1;
   max-width: 800px;
@@ -224,16 +226,7 @@ header .container nav .navbar-nav .book .nav-link:hover {
   margin: 0 32px;
 }
 
-.top::after {
-  content: url("images/brush-min.png");
-  position: absolute;
-  left: 0;
-  bottom: -288px;
-  width: 100%;
-}
-
 /* SECTION1*/
-
 .section1 {
   position: relative;
   top: 0;
@@ -259,14 +252,14 @@ header .container nav .navbar-nav .book .nav-link:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .section1 .container .row img {
@@ -274,10 +267,9 @@ header .container nav .navbar-nav .book .nav-link:hover {
   width: 100%;
 }
 
-.section1:after {
-  content: url("images/brush-min.png");
+.section1::after {
+  content: url("/images/brush-min.png");
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
   left: 0;
@@ -287,9 +279,7 @@ header .container nav .navbar-nav .book .nav-link:hover {
 }
 
 /* SECTION2 */
-
 /* SECTION3 */
-
 .section3 .div1 img {
   padding: 30px;
   -webkit-box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.4);
@@ -304,12 +294,12 @@ header .container nav .navbar-nav .book .nav-link:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .section3 .container .row .div2 h3 {
@@ -336,7 +326,7 @@ header .container nav .navbar-nav .book .nav-link:hover {
 }
 
 .section3::before {
-  content: url("images/brush-min.png");
+  content: url("/images/brush-min.png");
   position: absolute;
   left: 0;
   top: -128px;
@@ -345,9 +335,8 @@ header .container nav .navbar-nav .book .nav-link:hover {
 }
 
 .section3::after {
-  content: url("images/brush-min.png");
+  content: url("/images/brush-min.png");
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
   left: 0;
@@ -357,9 +346,7 @@ header .container nav .navbar-nav .book .nav-link:hover {
 }
 
 /* SECTION4 */
-
 /* SECTION5 */
-
 .section5 .container .row {
   height: 100%;
 }
@@ -371,13 +358,13 @@ header .container nav .navbar-nav .book .nav-link:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 20%;
 }
 
-.section5::before {
-  content: url("images/brush-min.png");
+.section5 .container .row::before {
+  content: url("/images/brush-min.png");
   position: absolute;
   left: 0;
   top: -112px;
@@ -388,18 +375,17 @@ header .container nav .navbar-nav .book .nav-link:hover {
 /*FOOTER*/
 footer {
   background-color: #2d3436;
-  background-image: -o-linear-gradient(135deg, #2d3436 0%, #000000 74%);
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   position: relative;
 }
 
-footer > .container {
+footer .container {
   position: relative;
   padding: 0;
   height: 100%;
 }
 
-.div1 div {
+footer .container .div1 div {
   margin: 32px 0;
 }
 
@@ -412,21 +398,22 @@ footer .workhours-book {
 
 footer .workhours-book .book {
   margin-top: 0;
+  padding-top: 30px;
 }
 
-footer .workhours-book ul,
-footer .social ul {
+footer .workhours-book .book .nav-link {
+  padding: 8px 16px;
+  border: 1px solid #9f7313;
+}
+
+footer .workhours-book ul {
   padding: 0;
 }
 
-footer .workhours-book ul li,
-footer .social ul li {
+footer .workhours-book ul li {
   list-style: none;
-}
-
-footer .workhours-book ul li,
-footer .social ul li a {
   color: #cd9418;
+  text-align: center;
 }
 
 .div1 .social ul {
@@ -442,11 +429,12 @@ footer .social ul li a {
   justify-content: center;
 }
 
-footer .social ul li {
+.div1 .social ul li {
   margin: 0 20px;
+  list-style: none;
 }
 
-footer .social ul li a i {
+.div1 .social ul li a i {
   font-size: 30px;
 }
 
@@ -475,18 +463,16 @@ footer .backtotop .fa {
     width: 100%;
     margin: 0 32px;
   }
-
   .section1 {
     height: 50vh;
   }
-
   .section3 .div1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -494,28 +480,24 @@ footer .backtotop .fa {
   .top img {
     max-width: initial;
   }
-
   .section1 .container .row img {
     width: initial;
   }
-
   .section1 .container .row q,
   .section1 .container .row h4 {
     font-size: 24px;
   }
-
   .section3 .div1 img {
     width: initial;
   }
-
   .section5 {
     min-height: 50vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -523,11 +505,9 @@ footer .backtotop .fa {
   header .container .hamburger-menu {
     display: none;
   }
-
   header .container .nav {
     visibility: visible;
   }
-
   header .container .nav .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -539,24 +519,21 @@ footer .backtotop .fa {
     height: initial;
     padding: 0;
   }
-
+  header .container .nav .navbar-nav .nav-item:nth-child(2) {
+    margin-right: 3em;
+  }
   header .container .nav .navbar-nav .navbar-brand {
     display: block;
     position: initial;
     width: initial;
     margin: 10px;
   }
-
-  header .container .nav .navbar-nav .nav-item:nth-child(2) {
-    margin-right: 48px;
-  }
-
   header .container .nav .navbar-nav .book {
-    padding: 0 0 0 80px;
+    padding: 0 0 0 5em;
   }
-
   .section5 q {
     font-size: 24px;
     margin: 15px;
   }
 }
+/*# sourceMappingURL=style.css.map */
