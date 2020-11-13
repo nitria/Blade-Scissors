@@ -5,10 +5,10 @@ if (isset($_POST['submit'])) {
     $mailFrom = $_POST['mail'];
     $message = $_POST['message'];
 
-    $mailTo = "";
-    $headers = "From: ".$mailFrom;
-    $txt = "mail from ".$first." ".$last."\n\n".$message;
+    $mailTo = "ntriantafillidis@yahoo.gr";
+    $headers = "From: " . $mailFrom;
+    $txt = "mail from " . $first . " " . $last . "\n\n" . $message;
 
     mail($mailTo, $message, $txt, $headers);
-    header("Location: index.html?send");
+    header("Location: contact.html?send");
 }
