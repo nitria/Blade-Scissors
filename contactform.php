@@ -10,5 +10,5 @@ if (isset($_POST['submit'])) {
     $txt = "mail from " . $first . " " . $last . "\n\n" . $message;
 
     mail($mailTo, $message, $txt, $headers);
-    header("Location: contact.html?send");
+    header("Location: index.html");
 }
